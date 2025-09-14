@@ -25,7 +25,7 @@
 | 1. Livews-server | 0.2.0 |  support: websocket,redis cache + local storage + auth2   |
 | 2. liveui-manager | 0.2.0 | admin management ui |
 | 3. livews-sport   | 0.1.0 | OBS live toolkits |
-| 4. livews-knowledge | 0.0.0 | 只是比賽直播插件 |
+| 4. livews-knowledge | 0.0.0 | 知識比賽直播插件 |
 
 ------
 
