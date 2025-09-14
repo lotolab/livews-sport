@@ -1,7 +1,7 @@
 <template>
   <div class="fb-index">
     <div class="lt-container">
-      <common-livebar home-name="阿根廷" away-name="英格兰" />
+      <common-livebar />
     </div>
     <!-- First load card info -->
     <first-load-card />

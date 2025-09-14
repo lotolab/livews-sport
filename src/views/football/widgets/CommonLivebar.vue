@@ -49,7 +49,7 @@ onUnmounted(() => {
 $commbar-width: 360px;
 $scores-width: auto;
 $name-base: 90px;
-$logo-size: 28px;
+$logo-size: 32px;
 
 .common-livebar {
   padding: 0;

@@ -8,7 +8,7 @@
       }"
     >
       <div
-        class="row-game py-2 px-5 text-2xl flex justify-left items-center space-x-2"
+        class="row-game pb-2 pt-1 px-4 text-7.5 flex justify-left items-center space-x-2"
       >
         <div class="game-logo">
           <i class="i-svg:goal"></i>
@@ -104,40 +104,43 @@ onMounted(() => {
     padding: 20px 32px;
     display: block;
     box-sizing: border-box;
-    background: rgba(#060c21, 0.75);
+    background: rgba(#060c21, 0.35);
     color: #ffffff;
     // opacity: 0.9;
 
-    $leftOffset: -6px;
+    $borderOffset: -8px;
 
     /*一个溢出的盒子作为边框，添加背景后形成光源效果*/
     &::before {
       content: '';
       position: absolute;
-      top: $leftOffset;
-      left: $leftOffset;
-      right: $leftOffset;
-      bottom: $leftOffset;
+      top: $borderOffset;
+      left: $borderOffset;
+      right: $borderOffset;
+      bottom: $borderOffset;
       background: #ffffff;
       z-index: -1;
+      border-radius: 12px;
     }
     /*另一个溢出的盒子，模糊形成光晕效果*/
     &::after {
       content: '';
       position: absolute;
-      top: $leftOffset;
-      left: $leftOffset;
-      right: $leftOffset;
-      bottom: $leftOffset;
+      top: $borderOffset;
+      left: $borderOffset;
+      right: $borderOffset;
+      bottom: $borderOffset;
       background: #ffffff;
       z-index: -2;
-      filter: blur(40px);
+      filter: blur(80px);
+      border-radius: 6px;
     }
 
     &::after,
     &::before {
       /*三色渐变，中间为背景色，融入背景*/
       background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+      opacity: 0.65;
     }
   }
 
@@ -167,8 +170,8 @@ onMounted(() => {
     padding: 0 8px 1px 8px;
 
     i.football {
-      width: 2.25em;
-      height: 2.25em;
+      width: 2.45em;
+      height: 2.45em;
       transform: rotate(0);
       animation: rorate 2s linear infinite;
     }
