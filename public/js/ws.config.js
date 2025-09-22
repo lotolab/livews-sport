@@ -7,7 +7,7 @@ Object.defineProperty(window,'wsConfig',{
     writable:false,
     enumerable:true,
     value:{
-        wsURL:'ws://127.0.0.1:8188/fb',
+        wsURL:'ws://127.0.0.1:8808/fb',
         gameid:'GA-8GvQrG_H1BpA',
     }
  })

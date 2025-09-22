@@ -35,3 +35,7 @@ auto-imports.d.ts
 .eslintrc-global-types.json
 components.d.ts
 
+
+dist-zip/*
+!dist-zip/.gitkeep
+!dist-zip/RELEASE_LOG.md
