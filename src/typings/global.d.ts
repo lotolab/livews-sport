@@ -14,6 +14,7 @@ declare global {
     __APP_INFO__: APP_INFO;
     wsConfig: {
       readonly wsURL: string;
+      readonly topic?: string;
       readonly gameid: string;
       [k: string]: any;
     };

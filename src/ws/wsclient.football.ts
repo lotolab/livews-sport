@@ -7,6 +7,7 @@ import type { FBGameLiveBase, FBGameLiveStatistics } from '@/core/types';
 
 let _fbcli: Socket | null = null;
 
+const gameid = import.meta.env.VITE_WS_GAMEID;
 const fbSocket = {
   connectFootballSocket: (store: Pinia, topic?: string) => {
     const { wsurl } = useSocket();
@@ -15,17 +16,34 @@ const fbSocket = {
       url = url.endsWith(topic) ? url : `${url}/${topic}`;
     }
 
+    if (gameid?.length) {
+      url =
+        url.indexOf('?') === -1
+          ? `${url}?gameid=${gameid}`
+          : `${url}&gameid=${gameid}`;
+      // url = `http://${window.location.host}/socket.io`;
+    }
+
     if (!_fbcli) {
       _fbcli = io(url, {
+        // path: 'fb',
         timeout: 30000,
         retries: 10,
         ackTimeout: 30000,
         autoConnect: true,
-        transports: ['websocket', 'polling']
+        transports: ['websocket', 'polling'],
+        withCredentials: true,
+        forceNew: true
       });
+
+      globalThis.console.log(url, _fbcli);
 
       _fbcli.on('connect', () => {
         globalThis.console.log(`${_fbcli?.id} connected....`);
+      });
+
+      _fbcli.on('connect_error', (err) => {
+        globalThis.console.error('Connect error>>>', err);
       });
 
       registListeners(store, _fbcli);

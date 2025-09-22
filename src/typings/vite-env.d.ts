@@ -19,11 +19,17 @@ interface ImportMetaEnv {
    * Http OR ws Proxy
    * VITE_BASE_API : /v1
    * WS will use /v1/ws
-   * VITE_WS_PROXY_TARGET: ws://192.168.0.88:4321/
+   *
+   *
    */
   readonly VITE_BASE_API: string;
+  readonly VITE_WS_API?: string;
   readonly VITE_SERVICE_PROXY_TARGET: string;
-  readonly VITE_WS_PROXY_TARGET?: string;
+  /**
+   * VITE_WS_PROXY_TARGET use VITE_WS_API
+   */
+  readonly VITE_WS_PROXY_TARGET: string;
+  readonly VITE_WS_GAMEID: string;
 }
 
 interface ImportEnv {

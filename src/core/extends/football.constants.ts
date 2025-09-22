@@ -9,6 +9,9 @@ export const defaultScreenSize: ScreenSize = {
   height: 1080
 };
 
+/**
+ *
+ */
 export const initBase: FBGameLiveBase = {
   gameid: '',
   liveid: '',
