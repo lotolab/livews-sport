@@ -19,7 +19,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
     "@iconify-json/mdi": "^1.2.3",
-    "@lotolab/live-common": "link:../live-common",
+    "@lotolab/live-common": "link:..\\live-common",
     "@unocss/preset-attributify": "^66.5.1",
     "@unocss/preset-icons": "^66.5.1",
     "@unocss/preset-rem-to-px": "^66.5.1",

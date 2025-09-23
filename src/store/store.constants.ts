@@ -4,5 +4,6 @@ export const enum PiniaModuleEnum {
   errlog = 'ErrorLog',
   football = 'GameFB',
   theme = 'ThemeUI',
+  toolkits = 'Toolkits',
   user = 'User'
 }

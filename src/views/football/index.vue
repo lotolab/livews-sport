@@ -5,10 +5,13 @@
     </div>
     <!-- First load card info -->
     <first-load-card />
+    <ptr-box />
   </div>
 </template>
 
 <script lang="ts" setup>
+import { PtrBox } from './toolkits/index';
+
 const FirstLoadCard = defineAsyncComponent(() => import('./FirstLoad.vue'));
 const CommonLivebar = defineAsyncComponent(
   () => import('./widgets/CommonLivebar.vue')
@@ -19,7 +22,8 @@ const CommonLivebar = defineAsyncComponent(
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 20px;
+  padding: 0px;
+  margin: 0px;
   background: transparent;
   position: relative;
 
