@@ -1,10 +1,4 @@
-import {
-  defineConfig,
-  loadEnv,
-  type ConfigEnv,
-  type ProxyOptions,
-  type UserConfig
-} from 'vite';
+import { defineConfig, loadEnv, type ConfigEnv, type UserConfig } from 'vite';
 
 import { Logger, wrapperEnv } from './build/utils';
 import { setupVitePlugins } from './build/vite/plugins';
@@ -22,7 +16,7 @@ export default defineConfig((userConfig: ConfigEnv): UserConfig => {
 
   const port = env.VITE_PORT ?? 9527;
   const apiPrefixPath = env.VITE_BASE_API ?? '/';
-  const proxyTarget = env.VITE_SERVICE_PROXY_TARGET ?? '';
+  // const proxyTarget = env.VITE_SERVICE_PROXY_TARGET ?? '';
 
   // const proxies: Array<ProxyOptions & { key: string }> = [
   //   {
@@ -36,7 +30,7 @@ export default defineConfig((userConfig: ConfigEnv): UserConfig => {
   //   }
   // ];
 
-  const wsTarget = env.VITE_WS_PROXY_TARGET;
+  // const wsTarget = env.VITE_WS_PROXY_TARGET;
   // if (wsTarget?.length) {
   //   const key = env.VITE_WS_BASE || '/wsapi';
 
